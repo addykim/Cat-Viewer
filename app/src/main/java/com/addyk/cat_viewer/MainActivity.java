@@ -106,7 +106,7 @@ public class MainActivity extends Activity {
                 } else {
                     mSystemUiHider.show();
                 }
-        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+//        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
 
             }
         });
