@@ -8,9 +8,16 @@ import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -164,4 +171,5 @@ public class MainActivity extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
 }
