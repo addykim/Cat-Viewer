@@ -4,6 +4,7 @@ import com.addyk.cat_viewer.util.SystemUiHider;
 import com.squareup.picasso.Picasso;
 
 import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
+        final View contentView = findViewById(R.id.fullscreen_content);git
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -106,7 +107,7 @@ public class MainActivity extends Activity {
                 } else {
                     mSystemUiHider.show();
                 }
-//        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+        Picasso.with(getApplicationContext()).load("http://i.imgur.com/DvpvklR.png").into(imageView);
 
             }
         });
