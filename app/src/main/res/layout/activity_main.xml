@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
     tools:context="com.addyk.cat_viewer.MainActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -22,6 +22,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         android:fitsSystemWindows="true">
 
         <LinearLayout
@@ -33,11 +34,11 @@
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"
+            <ImageButton android:id="@+id/cat_button" style="?metaButtonBarButtonStyle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:src="@drawable/button"/>
 
         </LinearLayout>
     </FrameLayout>

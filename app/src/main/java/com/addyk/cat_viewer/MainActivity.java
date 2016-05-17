@@ -4,7 +4,6 @@ import com.addyk.cat_viewer.util.SystemUiHider;
 import com.squareup.picasso.Picasso;
 
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -116,7 +115,7 @@ public class MainActivity extends Activity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        findViewById(R.id.cat_button).setOnTouchListener(mDelayHideTouchListener);
     }
 
     @Override
@@ -141,7 +140,10 @@ public class MainActivity extends Activity {
             if (AUTO_HIDE) {
                 delayedHide(AUTO_HIDE_DELAY_MILLIS);
             }
-            Picasso.with(getApplicationContext()).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+            if (CheckNetwork.isNetworkAvailable(getApplicationContext())) {
+                String url = "http://i.imgur.com/DvpvklR.png";
+                Picasso.with(getApplicationContext()).load(url).into(imageView);
+            }
             return false;
         }
     };

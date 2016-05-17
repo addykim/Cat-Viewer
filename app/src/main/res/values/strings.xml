@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Cat-Viewer</string>
 
+    <string name="cat_button">Get Cats</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
