@@ -1,7 +1,6 @@
 package com.addyk.cat_viewer;
 
 import com.addyk.cat_viewer.util.SystemUiHider;
-import com.squareup.picasso.Picasso;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -149,7 +148,7 @@ public class MainActivity extends Activity {
             }
             if (CheckNetwork.isNetworkAvailable(getApplicationContext())) {
                 String url = "http://i.imgur.com/DvpvklR.png";
-                Picasso.with(getApplicationContext()).load(url).into(imageView);
+//                Picasso.with(getApplicationContext()).load(url).into(imageView);
             }
             return false;
         }
